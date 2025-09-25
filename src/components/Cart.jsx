@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import products from "../data/products.json";
+import products from "../data/products";
 import { useNavigate } from "react-router-dom";
 
 export default function CartPage() {
@@ -16,7 +16,10 @@ export default function CartPage() {
     setCartItems((prev) =>
       prev.map((item) =>
         item.id === id
-          ? { ...item, qty: type === "inc" ? item.qty + 1 : Math.max(item.qty - 1, 1) }
+          ? {
+              ...item,
+              qty: type === "inc" ? item.qty + 1 : Math.max(item.qty - 1, 1),
+            }
           : item
       )
     );
@@ -26,14 +29,16 @@ export default function CartPage() {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
 
-  const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const subtotal = cartItems.reduce(
+    (sum, item) => sum + item.price * item.qty,
+    0
+  );
   const shippingCost = shipping === "delivery" ? 9.9 : 0;
   const total = subtotal + shippingCost;
 
   return (
     <div className="bg-gray-100 min-h-screen flex justify-center p-4 sm:p-8">
       <div className="bg-white w-full max-w-5xl rounded-lg p-6 sm:p-10">
-        
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
           <h1 className="text-2xl sm:text-3xl font-bold">My Cart</h1>
           <button
@@ -44,7 +49,6 @@ export default function CartPage() {
           </button>
         </div>
 
-  
         <div className="flex flex-col gap-6">
           {cartItems.map((item) => (
             <div
@@ -83,7 +87,9 @@ export default function CartPage() {
                     +
                   </button>
                 </div>
-                <p className="font-semibold">{(item.price * item.qty).toLocaleString()} ₹</p>
+                <p className="font-semibold">
+                  {(item.price * item.qty).toLocaleString()} ₹
+                </p>
                 <button
                   onClick={() => removeItem(item.id)}
                   className="text-gray-400 hover:text-red-500 text-xl"
@@ -95,7 +101,6 @@ export default function CartPage() {
           ))}
         </div>
 
-      
         <div className="bg-gray-100 rounded-lg p-4 sm:p-6 my-6">
           <h3 className="font-semibold mb-3">Choose shipping mode:</h3>
           <div className="flex flex-col sm:flex-row gap-3">
@@ -105,7 +110,9 @@ export default function CartPage() {
                 checked={shipping === "pickup"}
                 onChange={() => setShipping("pickup")}
               />
-              <span>Store pickup (≤ 30 min) — <b>FREE</b></span>
+              <span>
+                Store pickup (≤ 30 min) — <b>FREE</b>
+              </span>
             </label>
             <label className="flex items-center gap-2">
               <input
@@ -113,12 +120,13 @@ export default function CartPage() {
                 checked={shipping === "delivery"}
                 onChange={() => setShipping("delivery")}
               />
-              <span>Delivery at home (1–2 days) — <b>9.90 ₹</b></span>
+              <span>
+                Delivery at home (1–2 days) — <b>9.90 ₹</b>
+              </span>
             </label>
           </div>
         </div>
 
-     
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
           <div className="flex flex-col gap-1 text-sm sm:text-base w-full sm:w-auto">
             <p className="flex justify-between">
@@ -127,7 +135,9 @@ export default function CartPage() {
             </p>
             <p className="flex justify-between">
               <span className="text-gray-500">Shipping:</span>
-              <span className="font-medium">{shippingCost === 0 ? "Free" : `${shippingCost} ₹`}</span>
+              <span className="font-medium">
+                {shippingCost === 0 ? "Free" : `${shippingCost} ₹`}
+              </span>
             </p>
             <p className="flex justify-between mt-1 text-lg font-semibold">
               <span>Total:</span>

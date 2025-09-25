@@ -5,7 +5,7 @@ import "./App.css";
 import Header from "./components/Header";
 import FilterPanel from "./components/FilterPanel";
 import ProductCard from "./components/ProductCard";
-import products from "./data/products.json";
+import products from "./data/products";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import CartPage from "./components/Cart";
@@ -51,42 +51,41 @@ function App() {
 
   return (
     <Router>
-      <Header /> 
+      <Header />
 
-    <Routes>
-  <Route
-    path="/"
-    element={
-      <>
-        <Hero />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
 
-        {/* Filter panel horizontal at the top */}
-        <div className="bg-white px-6 py-4">
-          <FilterPanel onFilterChange={handleFilterChange} />
-        </div>
+              {/* Filter panel horizontal at the top */}
+              <div className="bg-white px-6 py-4">
+                <FilterPanel onFilterChange={handleFilterChange} />
+              </div>
 
-        {/* Products grid */}
-        <div className="px-6 pt-4 pb-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((item) => (
-                <ProductCard key={item.id} item={item} />
-              ))
-            ) : (
-              <p className="text-gray-500 col-span-full text-center">
-                No products found.
-              </p>
-            )}
-          </div>
-        </div>
+              {/* Products grid */}
+              <div className="px-6 pt-4 pb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                  {filteredProducts.length > 0 ? (
+                    filteredProducts.map((item) => (
+                      <ProductCard key={item.id} item={item} />
+                    ))
+                  ) : (
+                    <p className="text-gray-500 col-span-full text-center">
+                      No products found.
+                    </p>
+                  )}
+                </div>
+              </div>
 
-        <Footer />
-      </>
-    }
-  />
-  <Route path="/cart" element={<CartPage />} />
-</Routes>
-
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/cart" element={<CartPage />} />
+      </Routes>
     </Router>
   );
 }
