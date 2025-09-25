@@ -1,4 +1,4 @@
-// src/data/products.js
+
 import bagpack from '../assets/pngs/bagpack.png';
 import shirt from '../assets/pngs/shirt.png';
 import ring from '../assets/pngs/ring.png';
@@ -29,4 +29,4 @@ const products = [
   }
 ];
 
-export default products; // ✅ This line is required
+export default products; 
