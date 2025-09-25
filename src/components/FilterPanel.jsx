@@ -3,12 +3,12 @@ import React from "react";
 function FilterPanel({ onFilterChange }) {
   return (
     <div className="bg-white p-4 rounded">
-      {/* Horizontal scroll wrapper */}
+      
       <div className="flex justify-center overflow-x-auto">
         <div className="flex gap-4 snap-x snap-mandatory">
-          {/* Category */}
+        
           <div className="flex-shrink-0 w-48 snap-start">
-            <h4 className="font-medium mb-1">Category</h4>
+            <h4 className="font-normal mb-1">Category</h4>
             <select
               onChange={(e) => onFilterChange("category", e.target.value)}
               className="w-full border px-2 py-1 rounded focus:outline-none focus:ring-0"
@@ -21,9 +21,9 @@ function FilterPanel({ onFilterChange }) {
             </select>
           </div>
 
-          {/* Price Range */}
+        
           <div className="flex-shrink-0 w-48 snap-start">
-            <h4 className="font-medium mb-1">Price Range</h4>
+            <h4 className="font-normal mb-1">Price Range</h4>
             <select
               onChange={(e) => onFilterChange("price", e.target.value)}
               className="w-full border px-2 py-1 rounded focus:outline-none focus:ring-0"
@@ -35,9 +35,9 @@ function FilterPanel({ onFilterChange }) {
             </select>
           </div>
 
-          {/* Rating */}
+        
           <div className="flex-shrink-0 w-48 snap-start">
-            <h4 className="font-medium mb-1">Rating</h4>
+            <h4 className="font-normal mb-1">Rating</h4>
             <select
               onChange={(e) => onFilterChange("rating", e.target.value)}
               className="w-full border px-2 py-1 rounded focus:outline-none focus:ring-0"
@@ -48,9 +48,9 @@ function FilterPanel({ onFilterChange }) {
             </select>
           </div>
 
-          {/* Sort By */}
+     
           <div className="flex-shrink-0 w-48 snap-start">
-            <h4 className="font-medium mb-1">Sort By</h4>
+            <h4 className="font-normal mb-1">Sort By</h4>
             <select
               onChange={(e) => onFilterChange("sort", e.target.value)}
               className="w-full border px-2 py-1 rounded focus:outline-none focus:ring-0"

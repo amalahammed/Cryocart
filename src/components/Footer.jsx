@@ -4,11 +4,11 @@ function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Footer Links */}
+      
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-700 pb-10 mb-8">
-          {/* Company */}
+
           <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <h3 className="text-white font-semibold mb-4">Crayocart</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="hover:text-orange-300">
@@ -28,7 +28,7 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+       
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
@@ -45,7 +45,7 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
+       
           <div>
             <h3 className="text-white font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
@@ -62,7 +62,7 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Category */}
+
           <div>
             <h3 className="text-white font-semibold mb-4">Category</h3>
             <ul className="space-y-2">
@@ -89,7 +89,7 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Download App */}
+         
           <div>
             <h3 className="text-white font-semibold mb-4">Download App</h3>
             <div className="flex flex-row sm:flex-col items-start sm:items-start gap-4">
@@ -111,10 +111,10 @@ function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
+   
         <div className="flex flex-col md:flex-row items-center md:justify-between space-y-4 md:space-y-0 text-center md:text-left">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Cryo Cart. All rights reserved.
+            © {new Date().getFullYear()} CryoCart. All rights reserved.
           </p>
         </div>
       </div>

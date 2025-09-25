@@ -34,20 +34,19 @@ export default function CrayoHeader() {
     <header className="bg-white shadow-md w-full sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex items-center space-x-2 flex-shrink-0">
             <img className="h-12 w-auto" src={CryoCart} alt="Cryo Cart Logo" />
             <span className="text-xl font-bold text-gray-800">Cryocart</span>
           </div>
 
-          {/* Desktop Nav */}
+
           <nav className="hidden md:flex space-x-6 items-center">
             {menuItems.map((item, idx) => (
-              // Parent is the hover "group" — button + dropdown are inside, so no gap between them
+              
               <div
                 key={idx}
                 className="relative group inline-block"
-                tabIndex={0} // allow focus-within on keyboard
+                tabIndex={0} 
               >
                 <button
                   type="button"
@@ -56,7 +55,7 @@ export default function CrayoHeader() {
                   {item.label}
                 </button>
 
-                {/* Dropdown panel: invisible & non-interactive by default, becomes visible and interactive on group hover/focus-within */}
+              
                 <div
                   className="
                     absolute left-0 top-full w-56 bg-white border rounded-md shadow-lg p-2 z-50
@@ -108,7 +107,7 @@ export default function CrayoHeader() {
         </div>
       </div>
 
-      {/* Mobile Menu (accordion style) */}
+     {/* RESPOSIVE MOBILE MENU */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
           <nav className="flex flex-col space-y-2 p-4">

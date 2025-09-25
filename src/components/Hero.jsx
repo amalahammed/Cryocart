@@ -18,11 +18,23 @@ export default function EcommerceHero() {
               storage, accessories and more
             </p>
             <button
-              className="mt-6 inline-flex items-center gap-3 px-5 py-2.5 border rounded-full bg-white shadow-sm text-sm font-medium"
-              aria-label="view more"
-            >
-              View more
-            </button>
+  className="
+    mt-6 inline-flex items-center gap-3 px-5 py-2.5 
+    border border-gray-300 rounded-full 
+    bg-white text-sm font-medium text-gray-800
+   
+    transition 
+    duration-300 
+    ease-in-out
+    hover:bg-orange-500 hover:text-white 
+    
+    transform hover:-translate-y-0.5 hover:scale-105
+  "
+  aria-label="view more"
+>
+  View more
+</button>
+
           </div>
 
           <div className="w-full md:w-1/2 flex justify-center md:justify-end relative group">
@@ -49,7 +61,7 @@ export default function EcommerceHero() {
                 </div>
               </div>
 
-              {/* Discount badge */}
+         
               <div className="absolute -top-3 sm:-top-4 right-3 sm:right-6">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-yellow-400 flex items-center justify-center font-semibold text-xs sm:text-sm">
                   50%

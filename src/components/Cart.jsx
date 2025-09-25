@@ -33,7 +33,7 @@ export default function CartPage() {
   return (
     <div className="bg-gray-100 min-h-screen flex justify-center p-4 sm:p-8">
       <div className="bg-white w-full max-w-5xl rounded-lg p-6 sm:p-10">
-        {/* Header */}
+        
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
           <h1 className="text-2xl sm:text-3xl font-bold">My Cart</h1>
           <button
@@ -44,7 +44,7 @@ export default function CartPage() {
           </button>
         </div>
 
-        {/* Cart Items */}
+  
         <div className="flex flex-col gap-6">
           {cartItems.map((item) => (
             <div
@@ -95,7 +95,7 @@ export default function CartPage() {
           ))}
         </div>
 
-        {/* Shipping Options */}
+      
         <div className="bg-gray-100 rounded-lg p-4 sm:p-6 my-6">
           <h3 className="font-semibold mb-3">Choose shipping mode:</h3>
           <div className="flex flex-col sm:flex-row gap-3">
@@ -118,7 +118,7 @@ export default function CartPage() {
           </div>
         </div>
 
-        {/* Totals & Checkout */}
+     
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
           <div className="flex flex-col gap-1 text-sm sm:text-base w-full sm:w-auto">
             <p className="flex justify-between">

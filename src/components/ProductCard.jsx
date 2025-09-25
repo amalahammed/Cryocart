@@ -7,7 +7,7 @@ function ProductCard({ item }) {
       className="
         bg-[#f2f2f3] 
         rounded-md 
-        p-4 
+        p-4
         flex flex-col 
         gap-2 
         w-full 
